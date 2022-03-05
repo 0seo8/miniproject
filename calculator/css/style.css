@@ -1,0 +1,74 @@
+/*기본 스타일 시트 초기화*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1f1f1f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.calculator {
+  width: 287px;
+  border: 1px solid #333;
+  background-color: #ccc;
+  padding: 5px;
+}
+
+/*grid방식*/
+.calculator form {
+  display: grid;
+  /* 열 지정, 4열, 너비 65px*/
+  grid-template-columns: repeat(4, 65px);
+  /* 행 높이 지정*/
+  grid-auto-rows: 65px;
+  /*버튼 사이의 갭*/
+  grid-gap: 5px;
+}
+
+/*버튼테두리 그리기*/
+.calculator form input {
+  border: 2px solid #333;
+  /*커서효과*/
+  cursor: pointer;
+  font-size: 19px;
+}
+
+.calculator form input:hover {
+    /*hover효과: 2px:퍼짐정도*/
+  box-shadow: 1px 1px 2px #333;;
+}
+
+/*색상적용*/
+.calculator form .clear {
+  background-color: #ed4848;
+}
+
+.calculator form .operator {
+  background-color: orange;
+}
+
+.calculator form .dot {
+  background-color: green;
+}
+
+/*gird-colunm을 이용해 레이아웃 배치*/
+
+.calculator form input[type="text"] {
+  grid-column: span 4;
+  text-align: right;
+  padding: 0 10px;
+}
+
+.calculator form .clear {
+  grid-column: span 3;
+}
+
+.calculator form .result {
+  grid-column: span 2;
+}
