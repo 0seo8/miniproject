@@ -47,6 +47,7 @@ body {
 /*색상적용*/
 .calculator form .clear {
   background-color: #ed4848;
+  grid-column: span 3;
 }
 
 .calculator form .operator {
@@ -63,10 +64,6 @@ body {
   grid-column: span 4;
   text-align: right;
   padding: 0 10px;
-}
-
-.calculator form .clear {
-  grid-column: span 3;
 }
 
 .calculator form .result {

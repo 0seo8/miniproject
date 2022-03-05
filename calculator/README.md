@@ -118,9 +118,12 @@ body {
 ```html
       <input type="button" value="1" onclick="document.forms.output.value+='1'">
 ```
+>**form 객체 접근 방법**
+body와 마찬가지로, form은 document의 직계 객체로 설계가 되어 있습니다. 단, 문서 내에 form이 여러 개가 될 수 있으므로 `document.forms`유사배열(HTMLCollection)에 담기게 됩니다. 따라서 폼 요소를 DOM으로 접근 후, 폼 내부 인터페이스 요소들을 `name` 또는 `type`의 속성값을 식별자로 접근할 수 있습니다.
+
 - 다르게 작성 필요부분
   -result와 clear는 복합 연산자를 사용하면 안됨.
-  -eval함수 : 실제 수식처럼 계산이 되게해주는 메서드,
+  -eval함수 : 실제 수식처럼 계산이 되게해주는 메서드.
 ```html
       <input type="button" class="clear" value="C" onclick="document.forms.output.value=''">
       <input type="button" class="operator result" value="=" onclick="document.forms.output.value=eval(document.forms.output.value)">
