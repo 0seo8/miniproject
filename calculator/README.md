@@ -120,7 +120,7 @@ body {
 ```
 - 다르게 작성 필요부분
   -result와 clear는 복합 연산자를 사용하면 안됨.
-  -eval함수 : 실제 수식처럼 계산이 되게해주는 메섣,
+  -eval함수 : 실제 수식처럼 계산이 되게해주는 메서드,
 ```html
       <input type="button" class="clear" value="C" onclick="document.forms.output.value=''">
       <input type="button" class="operator result" value="=" onclick="document.forms.output.value=eval(document.forms.output.value)">
