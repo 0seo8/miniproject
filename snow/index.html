@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>snow</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <script>
+    function createSnow() {
+      /*div태그생성*/
+      const el =document.createElement('div')
+      /*class작용*/
+      el.classList.add('snow');
+      el.style.marginLeft = randomPosition() + 'px';
+      /*body요소에 추가*/
+      document.body.appendChild(el);
+    }
+    function randomPosition(){
+      /*웹브라우저 수치 안에서 랜덤숫자가 나오도록*/
+      return Math.floor(Math.random()*window.innerWidth)
+    }
+    for(let i=0; i<300; i++){
+      createSnow();
+    }
+  </script>
+</body>
+</html>
